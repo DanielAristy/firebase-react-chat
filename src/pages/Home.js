@@ -6,10 +6,10 @@ import { Link } from 'react-router-dom';
 export default class HomePage extends Component {
   render() {
     return (
-      <div>
+      <div lass="container">
         <Header></Header>
         <section>
-          <div>
+          <div class="jumbotron">
             <div>
               <h1 >Welcome to Chatty</h1>
               <p>A great place to share your thoughts with friends</p>

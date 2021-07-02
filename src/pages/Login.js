@@ -32,22 +32,25 @@ export default class Login extends Component {
 
   render() {
     return (
-      <div>
+      <div className="container">
         <form
+          className="mt-5 py-5 px-5"/*Centrar el formulario*/
           autoComplete="off"
           onSubmit={this.handleSubmit}
         >
           <h1>
             Login to
-            <Link to="/">
+            <Link className="title ml-2" to="/">{/*Separacion al lado izquierdo*/}
               Chatty
             </Link>
           </h1>
-          <p>
+          <p className="lead">{/* Creando un estilo mas tenue en la letra */}
             Fill in the form below to login to your account.
           </p>
-          <div>
+          <div className="form-group">{/*Separacion*/}
             <input
+            /**form-control darle un tamañao hasta donde si limite el container */
+              className="form-control" 
               placeholder="Email"
               name="email"
               type="email"
@@ -55,8 +58,10 @@ export default class Login extends Component {
               value={this.state.email}
             />
           </div>
-          <div>
+          <div className="form-group">{/*Separacion*/}
             <input
+              /**form-control darle un tamañao hasta donde si limite el container */
+              className="form-control"
               placeholder="Password"
               name="password"
               onChange={this.handleChange}
@@ -64,11 +69,12 @@ export default class Login extends Component {
               type="password"
             />
           </div>
-          <div>
+          <div className="form-group">{/*Separacion*/}
             {this.state.error ? (
               <p>{this.state.error}</p>
             ) : null}
-            <button type="submit">Login</button>
+            {/*Boton redondeano de color azul */}
+            <button  className="btn btn-primary px-5" type="submit">Login</button>
           </div>
           <hr />
           <p>
